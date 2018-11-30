@@ -586,7 +586,7 @@ WebAuth.prototype.authorize = function (options) {
 
   params = this.transactionManager.process(params);
   params.scope = params.scope || 'openid profile email';
-
+  console.log(params);
   windowHelper.redirect(this.client.buildAuthorizeUrl(params));
 };
 
